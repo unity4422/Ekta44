@@ -1,0 +1,50 @@
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ ls -al
+total 9
+drwxr-xr-x 1 EKTA 197121  0 May 24 15:52 ./
+drwxr-xr-x 1 EKTA 197121  0 May 24 15:33 ../
+drwxr-xr-x 1 EKTA 197121  0 May 24 15:49 .git/
+-rw-r--r-- 1 EKTA 197121 23 May 24 15:35 welcome.txt
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ touch file1.log
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ mkdir log
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ touch ~/.gitignore_global
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ git config --global core.excludesfile ~/.gitignore_global
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ cat ~/.gitignore_global
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ *.log
+bash: file1.log: command not found
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$ ^C
+
+EKTA@DESKTOP-KKP6G5O MINGW64 ~/Desktop/Training/git_HandsOn (master)
+$
